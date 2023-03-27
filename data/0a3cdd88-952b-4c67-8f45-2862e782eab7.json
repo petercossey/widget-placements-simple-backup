@@ -1,0 +1,294 @@
+{
+  "uuid": "0a3cdd88-952b-4c67-8f45-2862e782eab7",
+  "template_file": "pages/product",
+  "region": "",
+  "sort_order": 0,
+  "entity_id": "118",
+  "status": "active",
+  "widget": {
+    "uuid": "88e0cf4f-1f82-4701-bfb8-c0caf6c95c3f",
+    "name": "Text",
+    "widget_configuration": {
+      "fontColor": "rgba(68,150,246,1)",
+      "textStyle": "custom",
+      "fontFamily": "inherit",
+      "fontWeight": "500",
+      "textContent": "<p>Customers only pay a 20% deposit for this item at checkout.</p>",
+      "fontSize": {
+        "type": "px",
+        "value": 18
+      },
+      "margin": {
+        "top": {
+          "type": "px",
+          "value": "0"
+        },
+        "left": {
+          "type": "px",
+          "value": "0"
+        },
+        "right": {
+          "type": "px",
+          "value": "0"
+        },
+        "bottom": {
+          "type": "px",
+          "value": "0"
+        }
+      },
+      "padding": {
+        "top": {
+          "type": "px",
+          "value": "0"
+        },
+        "left": {
+          "type": "px",
+          "value": "0"
+        },
+        "right": {
+          "type": "px",
+          "value": "0"
+        },
+        "bottom": {
+          "type": "px",
+          "value": "0"
+        }
+      },
+      "alignment": {
+        "vertical": "middle",
+        "horizontal": "left"
+      },
+      "_": {
+        "id": "88e0cf4f-1f82-4701-bfb8-c0caf6c95c3f"
+      }
+    },
+    "widget_template": {
+      "uuid": "0fa76133-7d46-4c34-a8de-17eb98c983d2",
+      "name": "Text",
+      "schema": [
+        {
+          "type": "hidden",
+          "settings": [
+            {
+              "id": "textContent",
+              "default": "You can use this widget to input text into the page."
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "label": "Design",
+          "sections": [
+            {
+              "settings": [
+                {
+                  "type": "typography",
+                  "label": "Text style",
+                  "id": "textStyle",
+                  "default": "custom",
+                  "typeMeta": {
+                    "conditionalSettings": [
+                      {
+                        "condition": "custom",
+                        "settings": [
+                          {
+                            "type": "select",
+                            "label": "Font family",
+                            "id": "fontFamily",
+                            "default": "inherit",
+                            "typeMeta": {
+                              "selectOptions": [
+                                {
+                                  "label": "Theme Default",
+                                  "value": "inherit"
+                                },
+                                {
+                                  "label": "Arial",
+                                  "value": "Arial, sans-serif"
+                                },
+                                {
+                                  "label": "Tahoma",
+                                  "value": "Tahoma, sans-serif"
+                                },
+                                {
+                                  "label": "Verdana",
+                                  "value": "Verdana, sans-serif"
+                                },
+                                {
+                                  "label": "Lucida",
+                                  "value": "Lucida, sans-serif"
+                                },
+                                {
+                                  "label": "Times New Roman",
+                                  "value": "Times New Roman, serif"
+                                },
+                                {
+                                  "label": "Courier",
+                                  "value": "Courier, serif"
+                                },
+                                {
+                                  "label": "Georgia",
+                                  "value": "Georgia, serif"
+                                },
+                                {
+                                  "label": "Palatino",
+                                  "value": "Palatino, serif"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "select",
+                            "label": "Font weight",
+                            "id": "fontWeight",
+                            "default": "500",
+                            "typeMeta": {
+                              "selectOptions": [
+                                {
+                                  "label": "Thin",
+                                  "value": "100"
+                                },
+                                {
+                                  "label": "Extra Light (Ultra Light)",
+                                  "value": "200"
+                                },
+                                {
+                                  "label": "Light",
+                                  "value": "300"
+                                },
+                                {
+                                  "label": "Normal",
+                                  "value": "400"
+                                },
+                                {
+                                  "label": "Medium",
+                                  "value": "500"
+                                },
+                                {
+                                  "label": "Semi Bold (Demi Bold)",
+                                  "value": "600"
+                                },
+                                {
+                                  "label": "Bold",
+                                  "value": "700"
+                                },
+                                {
+                                  "label": "Extra Bold (Ultra Bold)",
+                                  "value": "800"
+                                },
+                                {
+                                  "label": "Black (Heavy)",
+                                  "value": "900"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "number",
+                            "label": "Font size",
+                            "id": "fontSize",
+                            "default": {
+                              "value": 24,
+                              "type": "px"
+                            },
+                            "typeMeta": {
+                              "parseType": "integer"
+                            }
+                          },
+                          {
+                            "type": "color",
+                            "label": "Text color",
+                            "id": "fontColor",
+                            "default": "#333333"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "alignment",
+                  "label": "Alignment",
+                  "id": "alignment",
+                  "default": {
+                    "horizontal": "center",
+                    "vertical": "middle"
+                  },
+                  "typeMeta": {
+                    "display": "horizontal"
+                  }
+                },
+                {
+                  "type": "boxModel",
+                  "label": "Margin",
+                  "id": "margin",
+                  "default": {
+                    "top": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "right": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "bottom": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "left": {
+                      "value": "0",
+                      "type": "px"
+                    }
+                  }
+                },
+                {
+                  "type": "boxModel",
+                  "label": "Padding",
+                  "id": "padding",
+                  "default": {
+                    "top": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "right": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "bottom": {
+                      "value": "0",
+                      "type": "px"
+                    },
+                    "left": {
+                      "value": "0",
+                      "type": "px"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "template": "<style>\n    .sd-simple-text-{{_.id}} {\n      padding-top: {{padding.top.value}}{{padding.top.type}};\n      padding-right: {{padding.right.value}}{{padding.right.type}};\n      padding-bottom: {{padding.bottom.value}}{{padding.bottom.type}};\n      padding-left: {{padding.left.value}}{{padding.left.type}};\n\n      margin-top: {{margin.top.value}}{{margin.top.type}};\n      margin-right: {{margin.right.value}}{{margin.right.type}};\n      margin-bottom: {{margin.bottom.value}}{{margin.bottom.type}};\n      margin-left: {{margin.left.value}}{{margin.left.type}};\n\n      {{#if textStyle '===' undefined}}\n        color: {{fontColor}};\n        font-family: {{fontFamily}};\n        font-weight: {{fontWeight}};\n        font-size: {{fontSize.value}}{{fontSize.type}};\n        min-height: {{fontSize.value}}{{fontSize.type}};\n      {{/if}}\n    }\n\n    .sd-simple-text-{{_.id}} * {\n      margin: 0;\n      padding: 0;\n\n      {{#unless textStyle '!==' 'custom'}}\n        color: {{fontColor}};\n        font-family: {{fontFamily}};\n        font-weight: {{fontWeight}};\n        font-size: {{fontSize.value}}{{fontSize.type}};\n        min-height: {{fontSize.value}}{{fontSize.type}};\n      {{/unless}}\n\n      {{#if textStyle '===' 'default'}}\n        color: #333333;\n        font-family: Montserrat;\n        font-weight: 500;\n        font-size: 24px;\n      {{/if}}\n    }\n\n    .sd-simple-text-{{_.id}} {\n      {{#if alignment.horizontal '===' 'center'}}\n        text-align: center;\n      {{else if alignment.horizontal '===' 'left'}}\n        text-align: left;\n      {{else if alignment.horizontal '===' 'right'}}\n        text-align: right;\n      {{/if}}\n    }\n\n    #sd-simple-text-editable-{{_.id}} {\n      min-width: 14px;\n      line-height: 1.5;\n      display: inline-block;\n    }\n\n    #sd-simple-text-editable-{{_.id}}[data-edit-mode=\"true\"]:hover,\n    #sd-simple-text-editable-{{_.id}}[data-edit-mode=\"true\"]:active,\n    #sd-simple-text-editable-{{_.id}}[data-edit-mode=\"true\"]:focus {\n      outline: 1px dashed #3C64F4;\n    }\n\n    #sd-simple-text-editable-{{_.id}} strong,\n    #sd-simple-text-editable-{{_.id}} strong * {\n      font-weight: bold;\n    }\n</style>\n\n<div class=\"sd-simple-text-{{_.id}} {{#if textStyle}}{{#if textStyle '!==' 'custom'}} {{textStyle}}{{/if}}{{/if}}\">\n  <div id=\"sd-simple-text-editable-{{_.id}}\" data-edit-mode=\"{{_.pageBuilderData.previewState.editMode}}\">\n    {{{textContent}}}\n  </div>\n</div>\n\n{{#if _.context.isEditorMode '===' true}}\n    <script type=\"text/javascript\">\n        (function () {\n            var editMode = false;\n            var selector = \"sd-simple-text-editable-{{_.id}}\";\n            var element = document.getElementById(selector);\n            if (!element) { return; }\n\n            function initializeContentEditableText () {\n                if (window.BigCommerce && window.BigCommerce.inlineEditor && window.BigCommerce.sendWidgetUpdate) {\n                    editMode = true;\n                    window.BigCommerce.inlineEditor.init({\n                        selector: \"#\" + selector,\n                        editMode: editMode,\n                        onBlur: function (content) {\n                            element.innerHtml = content;\n                            flushChanges(content);\n                        },\n                        onKeyup: flushChanges,\n                        toolbarItems: ['bold', 'italic', 'underline', 'strikethrough', 'link']\n                    });\n                }\n            };\n\n            function flushChanges(content) {\n                var props = {\n                    \"textContent\": content\n                };\n                window.BigCommerce.sendWidgetUpdate(props, \"{{_.id}}\");\n            }\n\n            function setEditMode(data) {\n                editMode = data.editMode;\n                element.dataset.editMode = editMode;\n\n                if (window.BigCommerce && window.BigCommerce.inlineEditor) {\n                    if (editMode) {\n                        initializeContentEditableText()\n                    } else {\n                        window.BigCommerce.inlineEditor.remove(\"#\" + selector);\n                    }\n                }\n            }\n\n            window.addEventListener('message', function (event) {\n                try {\n                    var data = JSON.parse(event.data);\n                } catch (error) {\n                    return;\n                }\n\n                [{\n                    action: 'sdk-loaded',\n                    initiator: 'PAGE_BUILDER',\n                    callback: initializeContentEditableText\n                },{\n                    action: 'toggle-edit-mode',\n                    initiator: 'PAGE_BUILDER',\n                    callback: setEditMode\n                }].forEach(function (handler) {\n                    if (data.action === handler.action && data.initiator === handler.initiator) {\n                        try { handler.callback(data); } catch (error) {}\n                    }\n                })\n            });\n\n            initializeContentEditableText();\n        })();\n    </script>\n{{/if}}\n",
+      "date_created": "2020-06-23T18:07:21.127Z",
+      "date_modified": "2020-06-23T18:07:21.127Z",
+      "kind": "sd-simple-text",
+      "storefront_api_query": "",
+      "icon_name": "sd-text",
+      "template_engine": "handlebars_v3",
+      "client_rerender": false,
+      "current_version_uuid": "4119bdc3-56f2-402b-b5f5-9ec1cd765fe6",
+      "channel_id": 0,
+      "schema_translations": {}
+    },
+    "date_created": "2023-02-17T07:10:37.043Z",
+    "date_modified": "2023-02-17T07:10:37.043Z",
+    "description": "",
+    "storefront_api_query_params": {},
+    "version_uuid": "4119bdc3-56f2-402b-b5f5-9ec1cd765fe6",
+    "channel_id": 1
+  },
+  "date_created": "2023-02-17T07:10:37.440Z",
+  "date_modified": "2023-02-17T07:10:37.440Z",
+  "channel_id": 1
+}

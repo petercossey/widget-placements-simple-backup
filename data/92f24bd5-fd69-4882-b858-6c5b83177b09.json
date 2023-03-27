@@ -1,0 +1,757 @@
+{
+  "uuid": "92f24bd5-fd69-4882-b858-6c5b83177b09",
+  "template_file": "",
+  "region": "",
+  "sort_order": 0,
+  "entity_id": "",
+  "status": "active",
+  "widget": {
+    "uuid": "048cb0a2-cc1c-4f01-9345-fbf846c9281a",
+    "name": "Hero Banner",
+    "widget_configuration": {
+      "_": {
+        "id": "048cb0a2-cc1c-4f01-9345-fbf846c9281a"
+      },
+      "title": "<p>Beauty Quiz Free Gift</p>",
+      "subtitle": "Add a description for this hero banner. This is a great place to highlight a promotion.",
+      "imageFit": "fill",
+      "textColor": "#444444",
+      "buttonText": "<p>Try the quizz now</p>",
+      "titleStyle": "default",
+      "buttonFont": "default",
+      "buttonStyle": "round",
+      "buttonColor": "#444444",
+      "imageUrl": {
+        "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+        "type": "IMAGE_MANAGER"
+      },
+      "imageOpacity": 100,
+      "titleVisible": "show",
+      "imageParallax": "off",
+      "buttonVisible": "show",
+      "backgroundType": "image",
+      "containerHeight": "small",
+      "backgroundColor": "#444444",
+      "titleFontFamily": "inherit",
+      "titleFontWeight": "400",
+      "mobileTextColor": "#444444",
+      "buttonTextColor": "rgba(255,255,255,1)",
+      "descriptionStyle": "default",
+      "buttonFontFamily": "inherit",
+      "mobileButtonColor": "#444444",
+      "titleFontSize": {
+        "type": "px",
+        "value": 36
+      },
+      "descriptionVisible": "show",
+      "descriptionFontFamily": "inherit",
+      "descriptionFontWeight": "400",
+      "mobileButtonTextColor": "rgba(255,255,255,1)",
+      "imageAlignment": {
+        "vertical": "middle",
+        "horizontal": "center"
+      },
+      "descriptionFontSize": {
+        "type": "px",
+        "value": 21
+      },
+      "contentAlignment": {
+        "horizontal": "left"
+      }
+    },
+    "widget_template": {
+      "uuid": "55354e3a-4cab-48ff-aece-a93edefb6c50",
+      "name": "Hero Banner",
+      "schema": [
+        {
+          "type": "hidden",
+          "settings": [
+            {
+              "id": "title",
+              "default": "Hero Banner Title"
+            },
+            {
+              "id": "subtitle",
+              "default": "Add a description for this hero banner. This is a great place to highlight a promotion."
+            },
+            {
+              "id": "buttonText",
+              "default": "Shop now"
+            }
+          ]
+        },
+        {
+          "type": "tab",
+          "label": "Design",
+          "sections": [
+            {
+              "label": "Banner",
+              "settings": [
+                {
+                  "type": "input",
+                  "label": "Banner link",
+                  "id": "bannerLink",
+                  "default": "",
+                  "typeMeta": {
+                    "placeholder": "https://"
+                  }
+                },
+                {
+                  "type": "alignment",
+                  "label": "Content align",
+                  "id": "contentAlignment",
+                  "default": {
+                    "horizontal": "left"
+                  },
+                  "typeMeta": {
+                    "display": "horizontal"
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Banner size",
+                  "id": "containerHeight",
+                  "default": "small",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Small",
+                        "value": "small"
+                      },
+                      {
+                        "label": "Medium",
+                        "value": "medium"
+                      },
+                      {
+                        "label": "Large",
+                        "value": "large"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Background",
+                  "id": "backgroundType",
+                  "default": "image",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Image",
+                        "value": "image"
+                      },
+                      {
+                        "label": "Color",
+                        "value": "color"
+                      },
+                      {
+                        "label": "Video",
+                        "value": "video"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Background color",
+                  "id": "backgroundColor",
+                  "default": "#444444",
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "color"
+                    ]
+                  }
+                },
+                {
+                  "type": "imageManager",
+                  "id": "imageUrl",
+                  "default": {
+                    "src": "https://images.unsplash.com/photo-1533038590840-1cde6e668a91?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=100",
+                    "type": "IMAGE_MANAGER"
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "image"
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Image fit",
+                  "id": "imageFit",
+                  "default": "fill",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Fill to box",
+                        "value": "fill"
+                      },
+                      {
+                        "label": "Fit to box",
+                        "value": "fit"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "image"
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Image parallax",
+                  "id": "imageParallax",
+                  "default": "off",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "On",
+                        "value": "on"
+                      },
+                      {
+                        "label": "Off",
+                        "value": "off"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "image"
+                    ]
+                  }
+                },
+                {
+                  "type": "alignment",
+                  "label": "Image align",
+                  "id": "imageAlignment",
+                  "default": {
+                    "horizontal": "center",
+                    "vertical": "middle"
+                  },
+                  "typeMeta": {
+                    "display": "both"
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "image"
+                    ]
+                  }
+                },
+                {
+                  "type": "range",
+                  "label": "Image opacity",
+                  "id": "imageOpacity",
+                  "default": 100,
+                  "typeMeta": {
+                    "rangeValues": {
+                      "min": 0,
+                      "max": 100,
+                      "step": 1,
+                      "unit": "%"
+                    }
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "image"
+                    ]
+                  }
+                },
+                {
+                  "type": "input",
+                  "label": "Video URL (mp4)",
+                  "id": "videoUrl",
+                  "default": "",
+                  "typeMeta": {
+                    "placeholder": "https://"
+                  },
+                  "conditional": {
+                    "key": "backgroundType",
+                    "operator": "IN",
+                    "value": [
+                      "video"
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "label": "Text",
+              "settings": [
+                {
+                  "type": "visibility",
+                  "label": "Title",
+                  "id": "titleVisible",
+                  "default": "show"
+                },
+                {
+                  "type": "typography",
+                  "label": "Title style",
+                  "id": "titleStyle",
+                  "default": "default"
+                },
+                {
+                  "type": "select",
+                  "label": "Font family",
+                  "id": "titleFontFamily",
+                  "default": "inherit",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Theme Default",
+                        "value": "inherit"
+                      },
+                      {
+                        "label": "Arial",
+                        "value": "Arial, sans-serif"
+                      },
+                      {
+                        "label": "Tahoma",
+                        "value": "Tahoma, sans-serif"
+                      },
+                      {
+                        "label": "Verdana",
+                        "value": "Verdana, sans-serif"
+                      },
+                      {
+                        "label": "Lucida",
+                        "value": "Lucida, sans-serif"
+                      },
+                      {
+                        "label": "Times New Roman",
+                        "value": "Times New Roman, serif"
+                      },
+                      {
+                        "label": "Courier",
+                        "value": "Courier, serif"
+                      },
+                      {
+                        "label": "Georgia",
+                        "value": "Georgia, serif"
+                      },
+                      {
+                        "label": "Palatino",
+                        "value": "Palatino, serif"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "titleStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Font weight",
+                  "id": "titleFontWeight",
+                  "default": "400",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Thin",
+                        "value": "100"
+                      },
+                      {
+                        "label": "Extra Light (Ultra Light)",
+                        "value": "200"
+                      },
+                      {
+                        "label": "Light",
+                        "value": "300"
+                      },
+                      {
+                        "label": "Normal",
+                        "value": "400"
+                      },
+                      {
+                        "label": "Medium",
+                        "value": "500"
+                      },
+                      {
+                        "label": "Semi Bold (Demi Bold)",
+                        "value": "600"
+                      },
+                      {
+                        "label": "Bold",
+                        "value": "700"
+                      },
+                      {
+                        "label": "Extra Bold (Ultra Bold)",
+                        "value": "800"
+                      },
+                      {
+                        "label": "Black (Heavy)",
+                        "value": "900"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "titleStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "number",
+                  "label": "Font size",
+                  "id": "titleFontSize",
+                  "default": {
+                    "value": 36,
+                    "type": "px"
+                  },
+                  "typeMeta": {
+                    "parseType": "integer"
+                  },
+                  "conditional": {
+                    "key": "titleStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "visibility",
+                  "label": "Description",
+                  "id": "descriptionVisible",
+                  "default": "show"
+                },
+                {
+                  "type": "typography",
+                  "label": "Description style",
+                  "id": "descriptionStyle",
+                  "default": "default"
+                },
+                {
+                  "type": "select",
+                  "label": "Font family",
+                  "id": "descriptionFontFamily",
+                  "default": "inherit",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Theme Default",
+                        "value": "inherit"
+                      },
+                      {
+                        "label": "Arial",
+                        "value": "Arial, sans-serif"
+                      },
+                      {
+                        "label": "Tahoma",
+                        "value": "Tahoma, sans-serif"
+                      },
+                      {
+                        "label": "Verdana",
+                        "value": "Verdana, sans-serif"
+                      },
+                      {
+                        "label": "Lucida",
+                        "value": "Lucida, sans-serif"
+                      },
+                      {
+                        "label": "Times New Roman",
+                        "value": "Times New Roman, serif"
+                      },
+                      {
+                        "label": "Courier",
+                        "value": "Courier, serif"
+                      },
+                      {
+                        "label": "Georgia",
+                        "value": "Georgia, serif"
+                      },
+                      {
+                        "label": "Palatino",
+                        "value": "Palatino, serif"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "descriptionStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Font weight",
+                  "id": "descriptionFontWeight",
+                  "default": "400",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Thin",
+                        "value": "100"
+                      },
+                      {
+                        "label": "Extra Light (Ultra Light)",
+                        "value": "200"
+                      },
+                      {
+                        "label": "Light",
+                        "value": "300"
+                      },
+                      {
+                        "label": "Normal",
+                        "value": "400"
+                      },
+                      {
+                        "label": "Medium",
+                        "value": "500"
+                      },
+                      {
+                        "label": "Semi Bold (Demi Bold)",
+                        "value": "600"
+                      },
+                      {
+                        "label": "Bold",
+                        "value": "700"
+                      },
+                      {
+                        "label": "Extra Bold (Ultra Bold)",
+                        "value": "800"
+                      },
+                      {
+                        "label": "Black (Heavy)",
+                        "value": "900"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "descriptionStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "number",
+                  "label": "Font size",
+                  "id": "descriptionFontSize",
+                  "default": {
+                    "value": 21,
+                    "type": "px"
+                  },
+                  "typeMeta": {
+                    "parseType": "integer"
+                  },
+                  "conditional": {
+                    "key": "descriptionStyle",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Text color",
+                  "id": "textColor",
+                  "default": "#444444"
+                },
+                {
+                  "type": "color",
+                  "label": "Text color (mobile)",
+                  "id": "mobileTextColor",
+                  "default": "#444444"
+                }
+              ]
+            },
+            {
+              "label": "Button",
+              "settings": [
+                {
+                  "type": "visibility",
+                  "label": "Button",
+                  "id": "buttonVisible",
+                  "default": "show"
+                },
+                {
+                  "type": "typography",
+                  "label": "Button font",
+                  "id": "buttonFont",
+                  "default": "default"
+                },
+                {
+                  "type": "select",
+                  "label": "Font family",
+                  "id": "buttonFontFamily",
+                  "default": "inherit",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Theme Default",
+                        "value": "inherit"
+                      },
+                      {
+                        "label": "Arial",
+                        "value": "Arial, sans-serif"
+                      },
+                      {
+                        "label": "Tahoma",
+                        "value": "Tahoma, sans-serif"
+                      },
+                      {
+                        "label": "Verdana",
+                        "value": "Verdana, sans-serif"
+                      },
+                      {
+                        "label": "Lucida",
+                        "value": "Lucida, sans-serif"
+                      },
+                      {
+                        "label": "Times New Roman",
+                        "value": "Times New Roman, serif"
+                      },
+                      {
+                        "label": "Courier",
+                        "value": "Courier, serif"
+                      },
+                      {
+                        "label": "Georgia",
+                        "value": "Georgia, serif"
+                      },
+                      {
+                        "label": "Palatino",
+                        "value": "Palatino, serif"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "buttonFont",
+                    "operator": "IN",
+                    "value": [
+                      "custom"
+                    ]
+                  }
+                },
+                {
+                  "type": "select",
+                  "label": "Button style",
+                  "id": "buttonStyle",
+                  "default": "round",
+                  "typeMeta": {
+                    "selectOptions": [
+                      {
+                        "label": "Round",
+                        "value": "round"
+                      },
+                      {
+                        "label": "Square",
+                        "value": "square"
+                      },
+                      {
+                        "label": "Pill",
+                        "value": "pill"
+                      }
+                    ]
+                  },
+                  "conditional": {
+                    "key": "buttonVisible",
+                    "operator": "IN",
+                    "value": [
+                      "show"
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Button color",
+                  "id": "buttonColor",
+                  "default": "#444444",
+                  "conditional": {
+                    "key": "buttonVisible",
+                    "operator": "IN",
+                    "value": [
+                      "show"
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Button color (mobile)",
+                  "id": "mobileButtonColor",
+                  "default": "#444444",
+                  "conditional": {
+                    "key": "buttonVisible",
+                    "operator": "IN",
+                    "value": [
+                      "show"
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Button text color",
+                  "id": "buttonTextColor",
+                  "default": "rgba(255,255,255,1)",
+                  "conditional": {
+                    "key": "buttonVisible",
+                    "operator": "IN",
+                    "value": [
+                      "show"
+                    ]
+                  }
+                },
+                {
+                  "type": "color",
+                  "label": "Button text (mobile)",
+                  "id": "mobileButtonTextColor",
+                  "default": "rgba(255,255,255,1)",
+                  "conditional": {
+                    "key": "buttonVisible",
+                    "operator": "IN",
+                    "value": [
+                      "show"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "template": "<div id=\"sd-hero-image-{{_.id}}\"></div>\n\n<script type=\"text/javascript\">\n    (function() {\n        function loadScript(src, onload) {\n            const scriptTag = document.createElement('script');\n            scriptTag.type = 'text/javascript';\n            scriptTag.defer = true;\n            scriptTag.src = src;\n            if (onload) {\n                scriptTag.onload = onload;\n            }\n            document.head.appendChild(scriptTag);\n        }\n\n        var widgetConfiguration = {{{json .}}};\n\n        {{#if _.context.isEditorMode '===' true}}\n            var scriptPath = (build) => `https://microapps.bigcommerce.com/hero-image-widget-js/81aa85e9af30b1a25a734aa760e40ccd980d9383/${build}-bundle.js`;\n            if (window.BigCommerce\n                    && window.BigCommerce.initializeHeroImage\n                    && typeof window.BigCommerce.initializeHeroImage === 'function'\n                    && window.BigCommerce.initializeHeroImagePageBuilderComm\n                    && typeof window.BigCommerce.initializeHeroImagePageBuilderComm === 'function') {\n                const heroImage = window.BigCommerce.initializeHeroImage(widgetConfiguration);\n                window.BigCommerce.initializeHeroImagePageBuilderComm(heroImage);\n            } else {\n                loadScript(scriptPath('storefront'), () => {\n                    const heroImage = window.BigCommerce.initializeHeroImage(widgetConfiguration);\n                    loadScript(scriptPath('pageBuilder'), () => {\n                        window.BigCommerce.initializeHeroImagePageBuilderComm(heroImage);\n                    });\n                });\n            }\n        {{else}}\n            var storefrontScriptPath = \"https://microapps.bigcommerce.com/hero-image-widget-js/81aa85e9af30b1a25a734aa760e40ccd980d9383/storefront-bundle.js\";\n            if (window.BigCommerce && window.BigCommerce.initializeHeroImage && typeof window.BigCommerce.initializeHeroImage === 'function' ) {\n                window.BigCommerce.initializeHeroImage(widgetConfiguration).render();\n            } else {\n                loadScript(storefrontScriptPath, () => window.BigCommerce.initializeHeroImage(widgetConfiguration).render());\n            }\n        {{/if}}\n    })();\n</script>\n",
+      "date_created": "2021-09-14T19:10:23.276Z",
+      "date_modified": "2021-09-14T19:10:23.276Z",
+      "kind": "sd-hero-image-v2",
+      "storefront_api_query": "",
+      "icon_name": "sd-hero-image",
+      "template_engine": "handlebars_v3",
+      "client_rerender": true,
+      "current_version_uuid": "8f9b8d0d-ddfb-4ff7-85f6-55c85bffbf9a",
+      "channel_id": 0,
+      "schema_translations": {}
+    },
+    "date_created": "2023-03-14T00:12:09.763Z",
+    "date_modified": "2023-03-14T00:12:09.763Z",
+    "description": "",
+    "storefront_api_query_params": {},
+    "version_uuid": "8f9b8d0d-ddfb-4ff7-85f6-55c85bffbf9a",
+    "channel_id": 1
+  },
+  "date_created": "2023-03-14T00:12:09.854Z",
+  "date_modified": "2023-03-14T00:12:09.854Z",
+  "channel_id": 1
+}

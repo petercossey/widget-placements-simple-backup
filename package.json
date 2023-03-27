@@ -1,0 +1,17 @@
+{
+  "name": "store-widget-sync",
+  "version": "1.0.0",
+  "description": "A Node.js app which can sync page builder widgets between stores.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "Peter Cossey",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^18.0.6",
+    "node-fetch": "^3.3.1"
+  }
+}
