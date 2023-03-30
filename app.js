@@ -12,6 +12,11 @@ const dataDir = './data';
 const bc_access_token = process.env['access_token']
 const bc_store_hash = process.env['store_hash']
 
+if (!bc_access_token && !bc_store_hash) {
+  console.error('Please set the access_token and store_hash environment variables.');
+  process.exit(1);
+}
+
 async function fetchWidgetsAndSave(store_hash, access_token) {
   const widgetData = await getPlacements(store_hash, access_token);
 
